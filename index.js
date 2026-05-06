@@ -59,8 +59,8 @@ async function poll() {
     const name = player.name;
     if (!name) continue;
 
-    const rawScore = player.raw?.score ?? 0;
-    const rawTime  = player.raw?.time  ?? 0;   // seconds in current map/session
+    const rawScore = Math.round(player.raw?.score ?? 0);
+    const rawTime  = Math.round(player.raw?.time  ?? 0);  // seconds in current map/session
     const prev     = existingMap[name];
 
     let timeDelta  = 0;
