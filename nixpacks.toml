@@ -1,1 +1,5 @@
+[phases.install]
+cmds = ["npm install --prefer-offline --no-audit --no-fund"]
 
+[start]
+cmd = "node index.js"
